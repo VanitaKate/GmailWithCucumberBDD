@@ -1,8 +1,7 @@
 Feature: Compose email
 Scenario: User is able to compose new email and send it.
 Given User is on Gmail login page
-When User enters valid username and password
-Then Clicks on Login button
+When User enters valid username and password and clicks LoginButton
 Then user is able to login successfully
 When user clicks on Compose button opens new email window
 Then user enters subject of email

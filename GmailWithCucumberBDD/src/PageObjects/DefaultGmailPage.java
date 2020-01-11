@@ -12,7 +12,7 @@ public class DefaultGmailPage extends BaseClass {
 	
 	public DefaultGmailPage() {
 	//	driver=rdriver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(BaseClass.driver, this);
 		
 	}
 	@FindBy(xpath="//div[@class='T-I J-J5-Ji T-I-KE L3']")
@@ -58,5 +58,8 @@ WebElement SignOut;
 	public boolean SignOutEnabled() {
 		boolean flag=SignOut.isEnabled();
 		return flag;
+	}
+	public void SignOutGmail() {
+		SignOut.click();
 	}
 }

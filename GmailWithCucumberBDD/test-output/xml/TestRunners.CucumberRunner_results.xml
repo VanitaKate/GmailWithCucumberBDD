@@ -4,9 +4,9 @@
            failures="2"
            errors="0"
            skipped="0"
-           time="78.118">
+           time="117.092">
   <properties />
-            <testcase name="feature" time="39.785" classname="TestRunners.CucumberRunner">
+            <testcase name="feature" time="48.536" classname="TestRunners.CucumberRunner">
                 <failure type="cucumber.runtime.CucumberException"
                   message="java.lang.NullPointerException"
               >
@@ -44,31 +44,29 @@
 Caused by: java.lang.NullPointerException
   org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
   org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-  com.sun.proxy.$Proxy18.sendKeys(Unknown Source)
-  PageObjects.GmailLoginPage.setUserName(GmailLoginPage.java:47)
-  Tests.LoginStepDefinitions.user_enters_valid_username_and_password(LoginStepDefinitions.java:52)
-  ?.When User enters valid username and password(./Features/ComposeEmail.feature:4)
+  com.sun.proxy.$Proxy18.click(Unknown Source)
+  PageObjects.GmailLoginPage.setUserName(GmailLoginPage.java:51)
+  Tests.LoginStepDefinitions.user_enters_valid_username_and_password(LoginStepDefinitions.java:61)
+  ?.When User enters valid username and password and clicks LoginButton(./Features/ComposeEmail.feature:4)
 ]]>
       </failure>
 
           </testcase>
-            <testcase name="feature" time="38.333" classname="TestRunners.CucumberRunner">
+            <testcase name="feature" time="68.556" classname="TestRunners.CucumberRunner">
                 <failure type="cucumber.runtime.CucumberException"
-                  message="org.openqa.selenium.NoSuchElementException: Web element reference not seen before: 9cee538e-c862-45e9-903b-c3e7a3f331e2
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  message="org.openqa.selenium.JavascriptException: TypeError: document.getElementByClassName is not a function
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;DESKTOP-NG79I8K&apos;, ip: &apos;192.168.225.20&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12992, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e13e3340-e663-42af-b624-c2a0d5fbc4d0"
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200107212822, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10340, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b9cca424-de59-4807-a5ab-75a08d4d04a9"
               >
-<![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: Web element reference not seen before: 9cee538e-c862-45e9-903b-c3e7a3f331e2
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.JavascriptException: TypeError: document.getElementByClassName is not a function
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'DESKTOP-NG79I8K', ip: '192.168.225.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12992, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e13e3340-e663-42af-b624-c2a0d5fbc4d0
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200107212822, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10340, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b9cca424-de59-4807-a5ab-75a08d4d04a9
   cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
   cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -99,13 +97,12 @@ Session ID: e13e3340-e663-42af-b624-c2a0d5fbc4d0
   org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Web element reference not seen before: 9cee538e-c862-45e9-903b-c3e7a3f331e2
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.JavascriptException: TypeError: document.getElementByClassName is not a function
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'DESKTOP-NG79I8K', ip: '192.168.225.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12992, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e13e3340-e663-42af-b624-c2a0d5fbc4d0
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200107212822, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10340, moz:profile: C:\Users\Administrator\AppD..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b9cca424-de59-4807-a5ab-75a08d4d04a9
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -117,9 +114,9 @@ Session ID: e13e3340-e663-42af-b624-c2a0d5fbc4d0
   org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
   org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
   org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-  PageObjects.GmailLoginPage.btnNextClick(GmailLoginPage.java:56)
-  Tests.LoginStepDefinitions.user_enters_valid_username_and_password(LoginStepDefinitions.java:60)
-  ?.When User enters valid username and password(./Features/LoginGmail.feature:5)
+  PageObjects.GmailLoginPage.setPassword(GmailLoginPage.java:61)
+  Tests.LoginStepDefinitions.user_enters_valid_username_and_password(LoginStepDefinitions.java:70)
+  ?.When User enters valid username and password and clicks LoginButton(./Features/LoginGmail.feature:5)
 ]]>
       </failure>
 

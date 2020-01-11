@@ -2,6 +2,9 @@ package Configurations;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -10,11 +13,14 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,6 +30,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import Configurations.ReadConfig;
+import PageObjects.ComposeGmailPage;
 import PageObjects.DefaultGmailPage;
 import PageObjects.GmailLoginPage;
 import cucumber.api.java.After;
@@ -33,33 +40,41 @@ import cucumber.api.java.Before;
 //@Test
 public class BaseClass {
 
-//	public  Logger logger=LogManager.getLogger(BaseClass.class);
-	//propertyConfigurator.configure
+	//	public  Logger logger=LogManager.getLogger(BaseClass.class);
+	private static final int TIMEOUT = 5;
+	private static final int POLLING = 100;
 	public static WebDriver driver;
-//	public static	ReadConfig ReadConfig=new ReadConfig();
-//	public static 	DefaultGmailPage DP=new DefaultGmailPage();
+	public static WebDriverWait wait;
+	//	public static	ReadConfig ReadConfig=new ReadConfig();
 
-	public BaseClass() {
-
+	@BeforeClass
+	public static void TimeStamp() {
+		DateFormat df = new SimpleDateFormat("dd:MM:yy HH:mm:ss");
+		Date dateobj = new Date();
+		System.out.println(df.format(dateobj));
 	}
-
-	//public GmailLoginPage LP=new GmailLoginPage(driver);
-	//public DefaultGmailPage	DP=new DefaultGmailPage(driver);
-	String Browser="FireFox";
-	//	@BeforeClass
 	public static void setup() throws InterruptedException {
-		System.out.println(System.nanoTime());
-//		System.out.println(ReadConfig.getFireFoxPath());
-		System.setProperty("webdriver.gecko.driver", "C:\\Selenium Drivers\\geckodriver.exe");
+
+
+		//		System.out.println(ReadConfig.getFireFoxPath());
+		/*
+		 * ChromeOptions options=new ChromeOptions(); options.
+		 * setBinary("C:\\Program Files (x86)\\Google\\Chrome Beta\\Application\\chrome.exe"
+		 * ); System.setProperty("webdriver.chrome.driver",
+		 * "C:\\Selenium Drivers\\chromedriver.exe"); WebDriver driver=new
+		 * ChromeDriver(options);
+		 */
+
+		System.setProperty("webdriver.gecko.driver","C:\\Selenium Drivers\\geckodriver.exe");
 		driver=new FirefoxDriver();
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();	
+		driver.manage().deleteAllCookies(); driver.manage().window().maximize();
 		driver.get("https://Gmail.com");
-		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-//		Thread.sleep(9000);
-		System.out.println(driver.getTitle());
+		//driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+		Thread.sleep(9000);
+
+		//		System.out.println(driver.getTitle());
 	}
-	//	@AfterClass
+	@AfterClass
 	public static void endTest() {
 		driver.quit();
 	}

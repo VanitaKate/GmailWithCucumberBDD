@@ -85,6 +85,9 @@ Thread.sleep(6000);
 		//		WebElement btnCompose=driver.findElement(By.xpath("//div[@class='T-I J-J5-Ji T-I-KE L3']"));
 		//		wait.until(ExpectedCondition.visibilityOfElementLocated(By.xpath("//div[@class='T-I J-J5-Ji T-I-KE L3']")));
 		System.out.println(driver.getTitle());
+		
+		boolean flag=DP.emailSubjectcheckboxChecked();
+		System.out.println("CheckBox of given subject selected?  "+flag);
 
 
 	}
@@ -135,7 +138,7 @@ Thread.sleep(6000);
 		Thread.sleep(5000);
 		DP.clickMenuSentItems();
 		Thread.sleep(10000);
-		boolean flag=DP.checkBoxChecked();
+		boolean flag=DP.emailSubjectcheckboxChecked();
 		System.out.println(flag);
 		if (flag) {
 			System.out.println("Sent page displayed completely");

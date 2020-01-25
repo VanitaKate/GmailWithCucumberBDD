@@ -22,8 +22,8 @@ public class DefaultGmailPage extends BaseClass {
 	@FindBy(xpath="//span[contains(text(),'Sent')]")
 	WebElement menuSent;
 
-	@FindBy(xpath="//*/td[@id=\":63\"]//div[@id=\":64\"]")
-	WebElement checkBox;
+	@FindBy(xpath="//span//span[contains(text(),'Security alert')]/ancestor::tr/td[2]/div")
+	WebElement emailSubjectcheckbox;
 	
 	@FindBy(xpath="//span[@class='gb_Ia gbii']")
 	WebElement userLogo;
@@ -51,8 +51,10 @@ WebElement SignOut;
 		return textVariable;
 	}
 	
-	public boolean checkBoxChecked() {
-		boolean flag=checkBox.isSelected();
+	public boolean emailSubjectcheckboxChecked() {
+		emailSubjectcheckbox.click();
+		boolean flag=emailSubjectcheckbox.isSelected();
+		
 		return flag;
 	}
 	public boolean SignOutEnabled() {
